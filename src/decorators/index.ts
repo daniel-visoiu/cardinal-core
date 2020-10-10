@@ -1,4 +1,4 @@
 export * from "./BindModel";
-export * from "./CustomTheme";
+export { default as CustomThenme } from "./CustomTheme";
 export * from "./TableOfContentEvent";
 export * from "./TableOfContentProperty";

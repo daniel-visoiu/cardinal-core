@@ -4,6 +4,7 @@
     "allowUnreachableCode": false,
     "declaration": true,
     "experimentalDecorators": true,
+    "allowJs": true,
     "lib": [
       "dom",
       "es2017"
@@ -21,6 +22,7 @@
     "types/jsx.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "./src/libs"
   ]
 }

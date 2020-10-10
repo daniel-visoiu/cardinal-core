@@ -6,8 +6,9 @@ export interface CardinalConfig extends Config {
 }
 
 export const config: CardinalConfig = {
-  namespace: 'cardinal',
+  namespace: 'cardinal-core',
   globalScript: './src/globals/index.ts',
+  buildDist: true,
   plugins: [
     global.removeWarnings()
   ],
@@ -16,10 +17,11 @@ export const config: CardinalConfig = {
       type: 'dist',
       esmLoaderPath: '../loader',
       copy: [
-        { src: 'controllers/AppConfigurationHelper.js', dest: "../cardinal/controllers/AppConfigurationHelper.js", warn: true },
-        { src: 'controllers/base-controllers', dest: "../cardinal/controllers/base-controllers", warn: true },
-        { src: 'events/*.js', dest: "../cardinal/events", warn: true },
-        { src: 'libs/*.js', dest: "../cardinal/libs", warn: true }
+        { src: 'controllers/AppConfigurationHelper.js', warn: true },
+        { src: 'controllers/defaultApplicationConfig.json', warn: true },
+        { src: 'controllers/base-controllers', warn: true },
+        { src: 'events/*.js', dest: "../cardinal-core/events", warn: true },
+        { src: 'libs/*.js', dest: "../cardinal-core/libs", warn: true }
       ]
     },
     {

@@ -43,4 +43,7 @@ class ControllerRegistryService {
     }
 }
 
+// required to solve typescript issues TS4023, not being able to infer class type
+export { ControllerRegistryService };
+
 export default new ControllerRegistryService();

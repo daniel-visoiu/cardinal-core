@@ -26,4 +26,6 @@ declare global {
   }
 }
 
-window.cardinalCore = cardinalCore;
+if (!("cardinalCore" in window)) {
+  window.cardinalCore = cardinalCore;
+}

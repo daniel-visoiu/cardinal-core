@@ -1,3 +1,6 @@
+import * as stencilCore from "@stencil/core";
+import * as stencilRouter from "@stencil/router";
+
 import * as controllers from "./controllers";
 import * as decorators from "./decorators";
 import * as events from "./events";
@@ -19,13 +22,23 @@ const cardinalCore = {
 };
 
 type CardinalCore = typeof cardinalCore;
+type StencilCore = typeof stencilCore;
+type StencilRouter = typeof stencilRouter;
 
 declare global {
   interface Window {
     cardinalCore: CardinalCore;
+    stencilCore: StencilCore;
+    stencilRouter: StencilRouter;
   }
 }
 
 if (!("cardinalCore" in window)) {
   window.cardinalCore = cardinalCore;
+}
+if (!("cardinalCore" in window)) {
+  window.stencilCore = stencilCore;
+}
+if (!("cardinalRouter" in window)) {
+  window.stencilRouter = stencilRouter;
 }

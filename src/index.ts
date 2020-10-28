@@ -36,7 +36,7 @@ declare global {
 if (!("cardinalCore" in window)) {
   window.cardinalCore = cardinalCore;
 }
-if (!("cardinalCore" in window)) {
+if (!("stencilCore" in window)) {
   window.stencilCore = stencilCore;
 }
 if (!("cardinalRouter" in window)) {
